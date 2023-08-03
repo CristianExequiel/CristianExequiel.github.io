@@ -1,0 +1,749 @@
+    /**********
+    ***********
+        GENERAL
+    ***********
+    **********/
+
+html{
+    font-family: 'Lumanosimo', cursive;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    margin: 0;
+}
+
+    /*selector universal, le agrego las caracteristicas a todos*/
+*{
+    box-sizing: border-box; /*delimito el espacio de un elemento html, sin importar el valor del padding, el html tendra su tamaño*/
+    padding: 0;
+    margin: 0;
+}   
+
+img{    /*indico que las imagenes ocupen el 100% de su padre*/
+    height: 100%;
+    width: 100%;
+}
+
+    /*estilo de la linea divisora*/
+hr {
+    border: 0.1px solid #050505;
+    opacity: 100%;
+    width: 80%;
+}
+
+
+
+    /**********
+    ***********
+        HEADER
+    ***********
+    **********/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /*con esto permito el desborde cuando el menu se desplace*/
+    align-items: center;
+    height: 35vh;
+    width: 100%;
+}
+
+    /* header: logo y texto */
+.header__logo{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+    /*estilos del titulo del header*/
+.header__text1{     
+    position: absolute; /* lo posiciono sobre la imagen */
+    width: 50%;
+    top: 20%;
+    font-size: 32px;
+    color: white;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+    /*estilos del subtitulo del header*/
+.header__text2{
+    position: absolute;
+    top: 55%;
+    font-size: 25px;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+    /* menu desplegable */
+.header__navbar{
+    position: absolute;
+    top: 8%;
+    right: 1.5%;
+    width: 25%;
+    display: flex;
+    background-color: transparent;
+    height: auto;
+}
+
+    /*estilos del boton*/
+.header__botton {
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    background-color: rgb(141, 141, 141);
+}
+
+    /*altura a la que comienza a abrirse el menú desplegable*/
+.section__navbar{   
+    margin-top: 25%;
+    display: flex;
+}
+
+    /* palabras del menu desplegable */
+.nav-link {
+    color: white;
+    background-color: rgb(41, 40, 40);
+    text-align: center;
+    border-color: #757575;
+}
+
+
+    /**********
+    ***********
+        MAIN
+    ***********
+    **********/
+
+
+/**********
+ABOUT
+**********/
+
+    /*estilo de los parrafos*/
+.estilos__textos {  
+    margin-top: 0; 
+    font-size: 1.2rem;
+    padding: 2% 2%;
+    text-align: justify;
+    align-items: center;
+    color: #000000;
+}
+
+.main__section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#about{
+    background-image: linear-gradient(0deg, rgb(177, 177, 177), rgb(66, 65, 65)); /* le pongo una inclinacion de 0 grados, y que vaya de gris osculo a gris claro */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.about__titulo {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    margin: 5% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*lo alineo de forma horizontal*/
+}
+
+.section__title {
+    margin-top: 8%;
+    color: rgb(245, 245, 245);
+    background-color: #3e4142;
+    height: auto;
+    width: auto;
+    padding: 1%;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 10%; /*redondeo las esquinas*/
+}
+
+#foto {
+    position: absolute;
+    top: 85%;
+    width: 13%;
+    left: 43.5%;
+}
+
+    /*utilizo la clase para darle estilo a la palabra DESCARGAR-CV*/
+.descargar__texto {
+    font-size: 16px;
+    color: black;
+    background-color: rgb(158, 145, 145);
+    border-radius: 10%;
+    padding: 2% 2%;
+}
+
+.descargar__texto a {
+    color: black;
+}
+.descargar__texto i {
+    color: black;
+}
+
+    /*estilos de los logos de las redes*/
+.icono__redes {
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.icono__redes a {
+    margin-right: 20px; /* Agregar espacio entre los iconos */
+    display: flex;
+    align-items: center;
+}
+.icono__redes i {
+    font-size: 30px; /* Tamaño de los iconos */
+    background-color: #777777; /* Fondo de los íconos */
+    padding: 8px; /* Espacio interno alrededor de los iconos */
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+
+/**********
+SKILLS
+**********/
+
+main section{
+    background-image: linear-gradient(0deg, rgb(177, 177, 177), rgb(75, 74, 74)); 
+    display: flex;
+}
+
+.main__text {
+    background-color: transparent;
+    height: auto; /*coloco auto para que se acomode de acuerdo al contenido que haya*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/**** SOFT SKILLS ****/
+#carousel {
+    width: 40%;
+    height: 25%;
+    display: block;
+}
+
+.section__subtitle {
+    width: auto;
+    padding: 1%;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 3%;
+    margin-top: 5%;
+    background-color: #979797;
+}
+
+    /*estilos comandos de carousel*/
+.skills__carousel {
+    display:block;
+    width: 100%;
+    height: 100%;
+}
+
+.imagenes__skills {
+    height: 200px;
+    width: 100%;
+    object-fit:contain;
+}
+
+
+/**** HARD SKILLS ****/
+    /*estilos de la barra de progreso en su conjunto*/
+.barra__progreso{ 
+    margin: 2%;
+    width: 70%;
+    display: block;
+    
+}
+
+    /*estilo de la barra llena+vacia*/
+.progress{
+    height: 5%;
+    font-size: 0.8rem;
+    margin: 1.7% 0.5%;
+    border-radius: 10%; /*redondeo las esquinas*/
+}
+
+    /*estilo del llenado y del fondo*/
+.progress__bar {
+    color: #000000;
+    background-color: #5f5f5f;
+    height: 80%;
+    margin: 1%;
+    text-align:center ;
+    font-size: 20px;
+    font-weight: 800; /*pongo la letra en negrita*/
+    letter-spacing: 4px; /*espacio entre letras*/
+}
+
+
+/**********
+ESTUDIO
+**********/
+
+    /*estilo del id estudio*/
+#estudios{ 
+    display: flex;
+}
+
+    /*estilos de los items*/
+.estudios__item { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+    /*estilos del logo*/
+.icono__estudios { 
+    font-size: 35px;
+    color: black;
+}
+
+    /*estilo de las letras debajo del logo*/
+.estudios__años{
+    font-size: 18px;
+}
+
+    /*estilo de los segundos subtitulos*/
+.section__subtitle2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #000000;
+}
+
+    /*estilo de los terceros subtitulos*/
+.section__subtitle3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+}
+
+
+/**********
+PROYECTOS
+**********/
+
+    /*estilo de la seccion proyectos*/
+.section__proyectos {
+    height: 100%;
+    width: 90%;
+    margin: 5% 5%;
+}
+
+    /*estilo del fondo colapsado*/
+.accordion-header .accordion-button {
+    background-color: #3b3b3b; 
+    color: #000000; 
+}
+
+    /*estilo texto colapsado*/
+.accordion-header .accordion-button.collapsed {
+    color: #ffffff; 
+    font-size: 18px;
+    font-weight: 600;
+}
+
+    /*estilo fondo texto descriptivo*/
+.accordion-body {
+    background-color: #cfcfcf; 
+    padding: 10px; /* Espaciado interno */
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+    /*estilo del texto descriptivo*/
+.proyecto__texto{
+    background-color: #cfcfcf;
+    font-size: 18px;
+    text-align: justify;
+    align-items: center;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+    /*Cambiar el estilo del acordeón cuando está activo */
+.accordion-header .accordion-button:active {
+    background-color: #a3a3a3; /* Color de fondo cuando está activo (presionado) */
+    color: #ffffff; /* Color del texto cuando está activo */
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.imagenes__proyectos{
+    height: 25%;
+    width: 25%;
+    align-items: center;
+}
+
+
+/**********
+EXPERIENCIA LABORAL
+**********/
+
+    /*estilos de los items*/
+.experiencia__item { 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+    /*estilos del logo*/
+.experiencia__icono { 
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+
+/**********
+CONTACTO
+**********/
+
+    /*estilos descripcion etiquetas*/
+.mb-3 {  
+    margin-top: 0; /*espacio entre el texto y el titulo*/ 
+    font-size: 1rem;
+    text-align: justify;
+    align-items: center;
+    width: 70%;
+}
+
+    /*estilos etiquetas*/
+.form-label {
+    font-weight: bold; /* Texto en negrita */
+    color: #333; 
+}
+
+    /*estilos contenedor de texto*/
+.form-control {
+    width: 100%;
+    margin-bottom: 10px; 
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #000000; /* Borde alrededor del campo */
+    border-radius: 5px;
+}
+
+    /*estilo del boton de envío*/
+.envio__button {
+    background-color: #3a3333;
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    margin-bottom: 10px; /*espacio inferior*/
+    box-shadow: 2px 4px 2px 2px rgba(70, 70, 70, 0.8);
+}
+
+    /*boton de envio pulsado*/
+.envio__button:hover {
+    background-color: #0056b3; /* Color de fondo del botón en hover */
+}
+
+
+
+    /**********
+    ***********
+        FOOTER
+    ***********
+    **********/
+
+#section__footer {
+    height: 15vh; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    background-color: rgb(41, 35, 35);
+}
+
+    /*estilos de los logos de las redes*/
+.icono__contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono__contacto a {
+    margin-right: 15px; /* espacio entre los iconos */
+    display: flex;
+    align-items: center;
+}
+.icono__contacto i {
+    font-size: 22px; 
+    background-color: #777777; 
+    padding: 8px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+
+
+
+
+        /*************
+        **************
+        MEDIA QUERIES TABLET
+        **************
+        *************/
+
+
+    @media (min-width: 768px) { 
+    html {
+        font-size: 15px;
+    }
+
+    .estilos__textos {
+        width: 83%;
+    }
+
+
+        /**********
+        HEADER
+        **********/
+
+    header {
+        height: 35vh;
+    }
+
+    .header__text1{
+        font-size: 30px;
+    }
+    .header__text2{
+        font-size: 22px;
+    }
+
+
+        /**********
+        ESTUDIOS
+        **********/
+
+            /*estilos de los items*/
+    .estudios__item { 
+        width: 100%;
+        margin: 2% 2%;
+    }
+
+
+        /**********
+        PROYECTOS
+        **********/
+
+    /*estilo de la seccion proyectos*/
+    .section__proyectos {
+        width: 80%;
+    }
+}
+
+
+
+
+        /*************
+        **************
+        MEDIA QUERIES DESKTOP
+        **************
+        *************/
+
+
+@media (min-width: 992px) { 
+    html {
+        font-size: 13px;
+    }
+
+
+        /**********
+        ***********
+            HEADER
+        ***********
+        **********/
+
+    header {
+        height: 38vh;
+    }
+
+    .header__botton {
+        display: none; /*no se va a mostrar el menu desplegablr*/
+    }
+
+    .header__text1{
+        font-size: 33px;
+    }
+    .header__text2{
+        font-size: 25px;
+        top: 40%;
+    }
+
+    #foto {
+        top: 65%;
+        width: 10%;
+        left: 45%;
+    }
+
+        /*menu desplegable(lg)*/
+    .header__navbar{
+        width: auto;
+        top: 0.1%;
+    }
+
+        /*trabajo con la barra de secciones*/
+    .section__navbar{   
+        background-color: green;
+        margin-top: 0.1%;
+    }
+
+        /* palabras del menu desplegable */
+    .nav-link {
+        border: 2.5px solid #a38e8e; /*cambiar grosor y color del borde*/
+        padding: 5px 10px; /*espacio entre borde*/
+        font-size: 15px;
+    }
+
+
+        /**********
+        ***********
+            MAIN
+        ***********
+        **********/
+
+    .section__title{
+        font-size: 25px;
+        margin-top: 5%;
+    }
+
+    .estilos__textos {  
+        font-size: 17px;
+    }
+    .descargar__texto {
+        font-size: 18px;
+    }
+    .icono__redes i {
+        font-size: 30px; /* Tamaño de los iconos */
+    }
+
+
+        /**********
+        SKILLS
+        **********/
+
+    .section__subtitle {
+        font-size: 18px;
+    }
+
+
+            /**** HARD SKILLS****/
+
+    /*estilo del llenado y del fondo*/
+    .progress__bar {
+        font-size: 16px;
+        font-weight: 800; /*pongo la letra en negrita*/
+    }
+
+
+        /**********
+        ESTUDIOS
+        **********/
+
+        /*estilos de los items*/
+    .estudios__item { 
+        margin: 2% 2%;
+    }    
+
+        /*estilos del logo*/
+    .icono__estudios { 
+        font-size: 35px;
+    }
+    
+        /*estilo de las letras debajo del logo*/
+    .estudios__años{
+        font-size: 20px;
+    }
+
+    .section__subtitle2 {
+        font-size: 25px;
+    }
+
+    .section__subtitle3 {
+        font-size: 22px;
+    }
+
+
+        /**********
+        EXPERIENCIA LABORAL
+        **********/
+
+    /*estilo de la seccion proyectos*/
+    .section__proyectos {
+        width: 75%;
+    }
+
+
+        /**********
+        EXPERIENCIA LABORAL
+        **********/
+
+    .experiencia__item { 
+        margin: 2% 2%;
+    }    
+
+    .experiencia__icono { 
+        font-size: 30px;
+    }
+
+
+    /**********
+        CONTACTO
+        **********/
+
+        /*estilos descripcion etiquetas*/
+    .mb-3 {  
+        font-size: 15px;
+    }
+
+        /*estilos contenedor de texto*/
+    .form-control {
+        font-size: 12px;
+    }
+
+        /*estilo del boton de envío*/
+    .envio__button {
+        font-size: 15px;
+    }
+
+
+    /**********
+    ***********
+        FOOTER
+    ***********
+    **********/
+
+    .icono__contacto i {
+        font-size: 25px; /* Tamaño de los iconos */
+    }    
+
+}
